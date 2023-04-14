@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include "main.h"
-/*
- * _strlen - returns the length of a string
- * @s : string
- * Return : length
+
+/**
+ * _strlen - returns the length of a given string
+ * @s: the string
+ * Return: the length of given string
  */
 int _strlen(char *s)
 {
@@ -13,7 +14,7 @@ int _strlen(char *s)
 		len++;
 	return (len);
 }
-/*
+/**
  * string_nconcat - Function that concatenates two strings.
  * @s1 : first string
  * @s2 : second string
