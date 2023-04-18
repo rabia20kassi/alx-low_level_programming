@@ -1,18 +1,19 @@
-#include <stdio.h>
 #include "dog.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * init_dog - initialize a variable of type struct dog
+ * @d: pointer
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
  */
-int main(void)
-{
-    struct dog my_dog;
 
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	if (d)
+	{
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
+	}
 }
