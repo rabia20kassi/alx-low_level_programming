@@ -12,8 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1;
-	int num2;
+	int num1, num2;
 	char *op;
 
 	if (argc != 4)
