@@ -20,28 +20,6 @@ int _strlen(const char *s)
 		return (n);
 	}
 }
-
-/**
- * _pow - returns the value of x raised to the power of y
- * @x: int
- * @y: int
- * Return: Always (Success)
- */
-int _pow(int x, int y)
-{
-	if  (y < 0)
-	{
-		return (-1);
-	}
-	else if (y == 0)
-	{
-		return (1);
-	}
-	else
-	{
-		return (x * _pow(x, y - 1));
-	}
-}
 /**
  * binary_to_uint - convert a binary number to an unsigned int
  * @b: a string of 0 and 1 chars
@@ -54,13 +32,13 @@ unsigned int binary_to_uint(const char *b)
 	int i = _strlen(b) - 1;
 	int j = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 	while (i >= 0)
 	{
 		if (b[i] == '0' || b[i] == '1')
 		{
-			v += (b[i] - '0') * _pow(2, j);
+			v += (b[i] - '0') * (1 << j);
 			i--;
 			j++;
 		}
