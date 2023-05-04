@@ -9,8 +9,6 @@ int _strlen(const char *s)
 {
 	int n = 0;
 
-	if (!*s)
-		return (0);
 	if (*s == '\0')
 	{
 		return (0);
